@@ -1,13 +1,23 @@
-name: Print-Messages
+name: Simple GitHub Action
+
 on:
-   push:
+  push:
+
 jobs:
-   print-job:
- 	runs-on: ubuntu-latest
-steps:
-   	- name: Print Welcome
-     	run: echo "Welcome to GitHub Actions"
-- name: Print DevOps
-     	run: echo "Learning DevOps is fun"
-- name: Print Success
-     	run: echo "Workflow executed successfully"
+  test-job:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Print Message
+        run: echo "Hello from GitHub Actions"
+
+      - name: Show Date
+        run: date
+
+      - name: List Files
+        run: ls
+
+      - name: Print Working Directory
+        run: pwd
